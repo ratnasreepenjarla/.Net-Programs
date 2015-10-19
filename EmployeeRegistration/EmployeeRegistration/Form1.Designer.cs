@@ -73,7 +73,7 @@
             // 
             // txtemail
             // 
-            this.txtemail.Location = new System.Drawing.Point(66, 39);
+            this.txtemail.Location = new System.Drawing.Point(66, 43);
             this.txtemail.Name = "txtemail";
             this.txtemail.Size = new System.Drawing.Size(100, 20);
             this.txtemail.TabIndex = 2;
