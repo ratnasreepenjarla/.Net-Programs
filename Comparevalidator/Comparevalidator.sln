@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeRegistration", "EmployeeRegistration\EmployeeRegistration.csproj", "{A1BEF090-3860-40FB-BC61-B69CA0E762E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Comparevalidator", "Comparevalidator\Comparevalidator.csproj", "{012FC532-8E7D-4E5F-96BB-797F6C858ED4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A1BEF090-3860-40FB-BC61-B69CA0E762E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A1BEF090-3860-40FB-BC61-B69CA0E762E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A1BEF090-3860-40FB-BC61-B69CA0E762E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A1BEF090-3860-40FB-BC61-B69CA0E762E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012FC532-8E7D-4E5F-96BB-797F6C858ED4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012FC532-8E7D-4E5F-96BB-797F6C858ED4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012FC532-8E7D-4E5F-96BB-797F6C858ED4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012FC532-8E7D-4E5F-96BB-797F6C858ED4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
