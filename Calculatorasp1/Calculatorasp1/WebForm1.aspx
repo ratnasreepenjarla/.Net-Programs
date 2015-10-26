@@ -20,8 +20,8 @@
        
         
     <table>
-        <tr><td><asp:TextBox ID="txtstatus" runat="server" Width="160px" BorderColor="#CC0066"></asp:TextBox></td></tr>
-        <tr><td><asp:TextBox ID="txtresult" runat="server" Width="160px" BorderColor="#CC0066"></asp:TextBox></td></tr>
+        <tr><td><asp:TextBox ID="txtstatus" runat="server" Width="160px" BorderColor="#CC0066"></asp:TextBox><br />
+        <asp:TextBox ID="txtresult" runat="server" Width="160px" BorderColor="#CC0066"></asp:TextBox></td></tr>
         
   <tr><td>
         <asp:Button ID="btn1" runat="server" Text="1" BorderColor="#CC0066" ForeColor="#333333" Width="33px" OnClick="btn1_Click" />
