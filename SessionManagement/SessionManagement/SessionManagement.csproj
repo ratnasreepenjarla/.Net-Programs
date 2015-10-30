@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Applicationweb.aspx" />
+    <Content Include="Cookieweb.aspx" />
     <Content Include="QueryString.aspx" />
     <Content Include="Session.asax" />
     <Content Include="Sessionweb.aspx" />
@@ -78,6 +79,13 @@
     </Compile>
     <Compile Include="Applicationweb.aspx.designer.cs">
       <DependentUpon>Applicationweb.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cookieweb.aspx.cs">
+      <DependentUpon>Cookieweb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cookieweb.aspx.designer.cs">
+      <DependentUpon>Cookieweb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryString.aspx.cs">
