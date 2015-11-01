@@ -46,16 +46,16 @@ namespace EmpRegistration_asp_
         string ConnectionString = ConfigurationManager.ConnectionStrings["Employee"].ConnectionString;
         using(SqlConnection con=new SqlConnection(ConnectionString))
         {
-            String insertcommand = "insert into EmployeeRegistration(Name,UserName,Password,Confirmpassword,Emailid,PhoneNumber,Gender,DOB,Designation,Joining)values('{0}','{1}''{2}','{3}','{4}','{5}','{6}','{7}','{8}''{9}')";
-            SqlCommand cmd =new SqlCommand(String.Format(insertcommand,Name,UserName,Password,Emailid,PhoneNumber,Gender,DOB,Designation,Joining),con);
+            String insertcommand = "insert into EmpRegistration(Name,UserName,Password,Confirmpassword,Emailid,PhoneNumber,Gender,DOB,Designation,Joining) values('{0}','{1}''{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}')";
+            SqlCommand cmd = new SqlCommand(String.Format(insertcommand, Name, UserName, Password, Confirmpassword, Emailid, PhoneNumber, Gender, DOB, Designation, Joining), con);
             con.Open();
             try{
-            cmd.ExecuteNonQuery();
-           Response.Write("values inserted successfully");
+              cmd.ExecuteNonQuery();
+              Response.Write("values inserted successfully");
             }
             catch(Exception ex)
             {
-
+                Response.Write(ex.Message);
             }
         }
         
