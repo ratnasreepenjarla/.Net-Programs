@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Login.Login" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Login1.aspx.cs" Inherits="EmpRegistration_asp_.Login" %>
 
 <!DOCTYPE html>
 
@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
     <div>
-     <table>
+      <table>
             <tr>
                 <td> <asp:Label ID="lblUserName" runat="server" Text="UserName"></asp:Label></td>
                 <td><asp:TextBox ID="txtUserName" runat="server"></asp:TextBox></td>
@@ -31,6 +31,7 @@
             </tr>
         </table>
     </div>
+        <asp:Label ID="lblMessage" runat="server"></asp:Label>
     </form>
 </body>
 </html>

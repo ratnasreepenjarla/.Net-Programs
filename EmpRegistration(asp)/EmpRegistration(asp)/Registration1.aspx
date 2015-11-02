@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="EmpRegistration_asp_.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration1.aspx.cs" Inherits="EmpRegistration_asp_.Registration" %>
 
 <!DOCTYPE html>
 
@@ -31,7 +31,7 @@
                 <td class="auto-style1"> <asp:TextBox ID="txtUserName" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtUserName" runat="server" ErrorMessage="enter Username"></asp:RequiredFieldValidator></td>
           </tr>
-          <tr>
+          <tr>-
               <td><asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label></td>
               <td class="auto-style1"> <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
                   <asp:RequiredFieldValidator ID="ReqireFieldValidator3" ControlToValidate="txtPassword" runat="server" ErrorMessage="enter password"></asp:RequiredFieldValidator>
@@ -41,13 +41,16 @@
          <tr>
              <td><asp:Label ID="lblConfirmPassword" runat="server" Text="ConfirmPassword"></asp:Label> </td>
              <td class="auto-style1"><asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtConfirmPassword"  runat="server" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
+                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtConfirmPassword"  runat="server" ErrorMessage="enter confirmpassword"></asp:RequiredFieldValidator>
                  <asp:CompareValidator ID="CompareValidator1" ControlToCompare="txtConfirmPassword" ControlToValidate="txtPassword"  runat="server" ErrorMessage="Password and ConfirmPassword should be same" ></asp:CompareValidator></td>
         </tr>
         <tr>
             <td><asp:Label ID="lblEmailid" runat="server" Text="Emailid"></asp:Label></td>
-            <td class="auto-style1"><asp:TextBox ID="txtEmailid" runat="server" TextMode="Email"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtEmailid"  ValidationExpression="^[a-zA-Z0-9]+@+[a-z]+.+[com]$" runat="server" ErrorMessage="enter Emailid"></asp:RequiredFieldValidator></td>
+            <td class="auto-style1"><asp:TextBox ID="txtEmailid" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" ControlToValidate="txtEmailid"   runat="server" ErrorMessage="enter Emailid"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator4" ControlToValidate="txtEmailid" ValidationExpression="^[a-zA-Z0-9]+@+[a-z]+.+[com]$" runat="server" ErrorMessage="Emaail should be in correct format"></asp:RegularExpressionValidator>
+                
+            </td>
        </tr>
        <tr>
 
@@ -86,11 +89,13 @@
      </tr>
      <tr>
          <td></td>
-         <td><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />&nbsp;&nbsp;&nbsp; <asp:Button ID="btnClear" runat="server" Text="Clear" Width="66px" /></td>
+         <td><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />&nbsp;&nbsp;&nbsp; <asp:Button ID="btnClear" runat="server" Text="Clear" Width="66px" OnClick="btnClear_Click" /></td>
      </tr>
 
 
     </table> </div>
+        
+        <asp:Label ID="lblMessage" runat="server"></asp:Label>
         
     </form>
         

@@ -57,27 +57,68 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Calculator1.aspx" />
+    <Content Include="Home.Master" />
+    <Content Include="Home.aspx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Login.aspx" />
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Registration.aspx" />
+    <Content Include="Login1.aspx" />
+    <Content Include="Registration1.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Registration.aspx.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
+    <Compile Include="Calculator1.aspx.cs">
+      <DependentUpon>Calculator1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Registration.aspx.designer.cs">
-      <DependentUpon>Registration.aspx</DependentUpon>
+    <Compile Include="Calculator1.aspx.designer.cs">
+      <DependentUpon>Calculator1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.Master.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.Master.designer.cs">
+      <DependentUpon>Home.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login1.aspx.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login1.aspx.designer.cs">
+      <DependentUpon>Login1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration1.aspx.cs">
+      <DependentUpon>Registration1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Registration1.aspx.designer.cs">
+      <DependentUpon>Registration1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <PropertyGroup>
