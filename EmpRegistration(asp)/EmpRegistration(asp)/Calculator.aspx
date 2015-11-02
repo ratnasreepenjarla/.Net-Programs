@@ -1,18 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Calculator1.aspx.cs" Inherits="EmpRegistration_asp_.Calculator" %>
-
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    <div>
-       
-        
-    <table>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Home.Master" AutoEventWireup="true" CodeBehind="Calculator.aspx.cs" Inherits="EmpRegistration_asp_.Calculator1" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <table>
         <tr><td><asp:TextBox ID="txtstatus" runat="server" Width="160px" BorderColor="#CC0066"></asp:TextBox><br />
         <asp:TextBox ID="txtresult" runat="server" Width="160px" BorderColor="#CC0066"></asp:TextBox></td></tr>
         
@@ -44,7 +34,4 @@
           </td></tr>    
 
        </table>
-    </div>
-    </form>
-</body>
-</html>
+</asp:Content>

@@ -7,14 +7,12 @@ using System.Web.UI.WebControls;
 
 namespace EmpRegistration_asp_
 {
-    public partial class Calculator : System.Web.UI.Page
+    public partial class Calculator1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
         }
-
-      
 
         protected void btn1_Click(object sender, EventArgs e)
         {
@@ -100,6 +98,7 @@ namespace EmpRegistration_asp_
             txtstatus.Text = "0";
 
         }
+
 
        
     }
