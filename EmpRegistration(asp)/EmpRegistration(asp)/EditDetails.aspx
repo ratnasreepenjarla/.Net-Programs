@@ -22,19 +22,6 @@
                 <td class="auto-style1"> <asp:TextBox ID="txtUserName" runat="server" ReadOnly="True"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtUserName" runat="server" ErrorMessage="enter Username"></asp:RequiredFieldValidator></td>
           </tr>
-          <tr>-
-              <td><asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label></td>
-              <td class="auto-style1"> <asp:TextBox ID="txtPassword" runat="server" TextMode="Password"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="ReqireFieldValidator3" ControlToValidate="txtPassword" runat="server" ErrorMessage="enter password"></asp:RequiredFieldValidator>
-                  <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ControlToValidate="txtPassword" ValidationExpression="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,15}$" runat="server" ErrorMessage="Pawwsord has 1 uppercase,1 lowrcase,1 Specialsymbol,1 digi&& length between 8-15"></asp:RegularExpressionValidator>
-              </td>
-         </tr>
-         <tr>
-             <td><asp:Label ID="lblConfirmPassword" runat="server" Text="ConfirmPassword"></asp:Label> </td>
-             <td class="auto-style1"><asp:TextBox ID="txtConfirmPassword" runat="server" TextMode="Password"></asp:TextBox>
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ControlToValidate="txtConfirmPassword"  runat="server" ErrorMessage="enter confirmpassword"></asp:RequiredFieldValidator>
-                 <asp:CompareValidator ID="CompareValidator1" ControlToCompare="txtConfirmPassword" ControlToValidate="txtPassword"  runat="server" ErrorMessage="Password and ConfirmPassword should be same" ></asp:CompareValidator></td>
-        </tr>
         <tr>
             <td><asp:Label ID="lblEmailid" runat="server" Text="Emailid"></asp:Label></td>
             <td class="auto-style1"><asp:TextBox ID="txtEmailid" runat="server"></asp:TextBox>

@@ -9,16 +9,18 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Text;
 
+
 namespace EmpRegistration_asp_
 {
     public partial class Registration1 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+          
         }
         protected void btnRegister_Click(object sender, EventArgs e)
         {
+            StringBuilder error = new StringBuilder();
             String Name = txtName.Text;
             String UserName = txtUserName.Text;
             String Password = txtPassword.Text;
@@ -30,7 +32,7 @@ namespace EmpRegistration_asp_
             string Designation = DdlDesignation.SelectedItem.Value;
             string Joining = txtJoining.Text;
 
-            StringBuilder error = new StringBuilder();
+           
             if (rbMale.Checked == true)
             {
                 Gender = rbMale.Text;
@@ -44,32 +46,55 @@ namespace EmpRegistration_asp_
                 error.Append("please select anyone option");
             }
 
+            
             string ConnectionString = ConfigurationManager.ConnectionStrings["Employee"].ConnectionString;
 
+            try
+            {
 
-            //using (sqlconnection con1 = new sqlconnection(connectionstring))
-            //{
-            //    string selectcommand = "select username,emailid,phonenumber from empregistration";
-            //    sqlcommand cmd1 = new sqlcommand(selectcommand, con1);
-            //    con1.open();
-            //    sqldatareader reader = cmd1.executereader();
-            //    while (reader.read())
-            //    {
-            //        if (txtusername.text == reader["username"].tostring() && txtemailid.text == reader["emailid"].tostring() && txtphonenumber.text == reader["phonenumber"].tostring())
-            //        {
-            //            lblmessage.text = "username,emailid,phonenumber must be unique";
-            //            txtusername.text = string.empty;
-            //            txtemailid.text = string.empty;
-            //            txtphonenumber.text = string.empty;
-            //        }
-            //        else
-            //        {
-                        InsertValues(Name, UserName, Password, Confirmpassword, Emailid, PhoneNumber, Gender, DOB, Designation, Joining, ConnectionString);
 
-                //    }
-                //}
+                using (SqlConnection con1 = new SqlConnection(ConnectionString))
+                {
+                    int n = 0;
+                    string selectcommand = "select username,emailid,phonenumber from empregistration";
+                    SqlCommand cmd1 = new SqlCommand(selectcommand, con1);
+                    con1.Open();
+                    SqlDataReader reader = cmd1.ExecuteReader();
+                    while (reader.Read())
+                    {
 
-            //}
+                        n++;
+                        if (n == 0)
+                        {
+                            InsertValues(Name, UserName, Password, Confirmpassword, Emailid, PhoneNumber, Gender, DOB, Designation, Joining, ConnectionString);
+
+
+                        }
+                        else
+                        {
+
+                            if (txtUserName.Text == reader["UserName"].ToString() && txtEmailid.Text == reader["Emailid"].ToString() && txtPhoneNumber.Text == reader["phonenumber"].ToString())
+                            {
+                                lblMessage.Text = "username,emailid,phonenumber must be unique";
+                                txtUserName.Text = string.Empty;
+                                txtEmailid.Text = string.Empty;
+                                txtPhoneNumber.Text = string.Empty;
+                                error.Append("error occured");
+                            }
+
+                        }
+
+                    }
+
+                }
+            }catch(Exception ex)
+            {
+               }
+            if(error.Length==0)
+            {
+                InsertValues(Name, UserName, Password, Confirmpassword, Emailid, PhoneNumber, Gender, DOB, Designation, Joining, ConnectionString);
+ 
+            }
         }
 
         private void InsertValues(String Name, String UserName, String Password, String Confirmpassword, String Emailid, String PhoneNumber, String Gender, String DOB, string Designation, string Joining, string ConnectionString)
@@ -83,7 +108,7 @@ namespace EmpRegistration_asp_
                 {
                     cmd.ExecuteNonQuery();
                     lblMessage.Text = "values inserted successfully";
-                    Response.Redirect("Login.aspx");
+                    FormClear();
                 }
 
                 catch (Exception ex)
@@ -96,17 +121,27 @@ namespace EmpRegistration_asp_
 
         protected void btnClear_Click(object sender, EventArgs e)
         {
-            txtName.Text = String.Empty;
-            txtUserName.Text = String.Empty;
-            txtPassword.Text = String.Empty;
+            FormClear();
+        }
+
+        private void FormClear()
+        {
+            txtName.Text = "";
+            txtUserName.Text = string.Empty;
+            txtPassword.Text = string.Empty;
             txtConfirmPassword.Text = string.Empty;
-            txtEmailid.Text = String.Empty;
-            txtPhoneNumber.Text = String.Empty;
-            txtDOB.Text = String.Empty;
-            txtJoining.Text = String.Empty;
+            txtEmailid.Text = string.Empty;
+            txtPhoneNumber.Text = string.Empty;
+            txtDOB.Text = string.Empty;
+            txtJoining.Text = string.Empty;
             rbMale.Checked = false;
             rbFemale.Checked = false;
             DdlDesignation.ClearSelection();
+        }
+
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
         }
       
     }

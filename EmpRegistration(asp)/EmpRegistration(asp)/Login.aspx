@@ -15,8 +15,8 @@
                 <td><asp:TextBox ID="txtUserName" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
-                <td><asp:Label ID="lblPassword" runat="server" Text="Password"></asp:Label></td>
-                <td> <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox></td>
+                <td><asp:Label ID="lblPassword" runat="server"  Text="Password"></asp:Label></td>
+                <td> <asp:TextBox ID="txtPassword" TextMode="Password" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
                 <td></td>

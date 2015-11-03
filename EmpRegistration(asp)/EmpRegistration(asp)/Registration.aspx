@@ -74,8 +74,9 @@
          <td>&nbsp;</td>
      </tr>
      <tr>
-         <td></td>
-         <td><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />&nbsp;&nbsp;&nbsp; <asp:Button ID="btnClear" runat="server" Text="Clear" Width="66px" OnClick="btnClear_Click" /></td>
+         <td>&nbsp;</td>
+         <td><asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" />&nbsp;&nbsp;&nbsp; <asp:Button ID="btnClear" runat="server" Text="Clear" Width="66px" OnClick="btnClear_Click" />
+         </td>
      </tr>
 
 

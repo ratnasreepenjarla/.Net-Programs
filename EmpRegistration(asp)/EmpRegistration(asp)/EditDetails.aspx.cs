@@ -28,8 +28,7 @@ namespace EmpRegistration_asp_
                 {
                     txtName.Text = reader["Name"].ToString();
                     txtUserName.Text = reader["UserName"].ToString();
-                    txtPassword.Text = reader["Password"].ToString();
-                    txtConfirmPassword.Text = reader["ConfirmPassword"].ToString();
+                   
                     txtEmailid.Text = reader["Emailid"].ToString();
                     txtPhoneNumber.Text = reader["PhoneNumber"].ToString();
                     if(reader["Gender"].ToString()=="male")
@@ -54,16 +53,9 @@ namespace EmpRegistration_asp_
 
         protected void btnUpdate_Click(object sender, EventArgs e)
         {
-            //String Name = txtName.Text;
-            //String UserName = txtUserName.Text;
-            //String Password = txtPassword.Text;
-            //String Confirmpassword = txtConfirmPassword.Text;
-            //String Emailid = txtEmailid.Text;
-            //String PhoneNumber = txtPhoneNumber.Text;
+       
             String Gender1 = null;
-            //String DOB = txtDOB.Text;
-            //string Designation = DdlDesignation.SelectedItem.Value;
-            //string Joining = txtJoining.Text;
+         
             String LoginUser = Session["UserName"].ToString();
             StringBuilder error = new StringBuilder();
             if (rbMale.Checked == true)
@@ -82,20 +74,18 @@ namespace EmpRegistration_asp_
             string ConnectionString = ConfigurationManager.ConnectionStrings["Employee"].ConnectionString;
             using (SqlConnection con = new SqlConnection(ConnectionString))
             {
-                String updatecommand = "update  EmpRegistration set Name = @Name1,Password = @Password1, Confirmpassword = @ConfirmPassword1,Emailid = @Emailid1,PhoneNumber = @PhoneNumber1,Gender='Gender1',Designation = @Designation1,Joining = @JoiningDate1  where UserName= "+LoginUser+"";
+                con.Open();
+                String updatecommand = "update  EmpRegistration set Name=@Name, Emailid = @Emailid,PhoneNumber = @PhoneNumber,Gender=' + Gender1  + ',Designation = @Designation,Joining = @JoiningDate  where UserName=' + LoginUser + '";
                 SqlCommand cmd = new SqlCommand(updatecommand, con);
-                cmd.Parameters.Add(new SqlParameter("Name1", txtName.Text));
-            
-                cmd.Parameters.Add(new SqlParameter("Password1", txtPassword.Text));
-                cmd.Parameters.Add(new SqlParameter("ConfirmPassword1",txtConfirmPassword.Text));
-                cmd.Parameters.Add(new SqlParameter("Emailid1", txtEmailid.Text));
-                cmd.Parameters.Add(new SqlParameter("PhoneNumber1", txtPhoneNumber.Text));
-                cmd.Parameters.Add(new SqlParameter("DOB1", txtDOB.Text));
-                cmd.Parameters.Add(new SqlParameter("Designation1",DdlDesignation.SelectedItem.Value));
-                cmd.Parameters.Add(new SqlParameter("JoiningDate1",txtJoining.Text));
+                cmd.Parameters.Add(new SqlParameter("Name", txtName.Text));
+                cmd.Parameters.Add(new SqlParameter("Emailid", txtEmailid.Text));
+                cmd.Parameters.Add(new SqlParameter("PhoneNumber", txtPhoneNumber.Text));
+                cmd.Parameters.Add(new SqlParameter("DOB", txtDOB.Text));
+                cmd.Parameters.Add(new SqlParameter("Designation",DdlDesignation.SelectedItem.Value));
+                cmd.Parameters.Add(new SqlParameter("JoiningDate",txtJoining.Text));
                 
 
-                con.Open();
+              
                 try
                 {
                     cmd.ExecuteNonQuery();
