@@ -47,29 +47,29 @@ namespace EmpRegistration_asp_
             string ConnectionString = ConfigurationManager.ConnectionStrings["Employee"].ConnectionString;
 
 
-            using (SqlConnection con1 = new SqlConnection(ConnectionString))
-            {
-                String Selectcommand = "select USerName,Emailid,PhoneNumber from EmpRegistration";
-                SqlCommand cmd1 = new SqlCommand(Selectcommand, con1);
-                con1.Open();
-                SqlDataReader reader = cmd1.ExecuteReader();
-                while (reader.Read())
-                {
-                    if (txtUserName.Text == reader["UserName"].ToString() && txtEmailid.Text == reader["Emailid"].ToString() && txtPhoneNumber.Text == reader["PhoneNumber"].ToString())
-                    {
-                        lblMessage.Text = "username,Emailid,PhoneNumber must be Unique";
-                        txtUserName.Text = String.Empty;
-                        txtEmailid.Text = String.Empty;
-                        txtPhoneNumber.Text = String.Empty;
-                    }
-                    else
-                    {
+            //using (sqlconnection con1 = new sqlconnection(connectionstring))
+            //{
+            //    string selectcommand = "select username,emailid,phonenumber from empregistration";
+            //    sqlcommand cmd1 = new sqlcommand(selectcommand, con1);
+            //    con1.open();
+            //    sqldatareader reader = cmd1.executereader();
+            //    while (reader.read())
+            //    {
+            //        if (txtusername.text == reader["username"].tostring() && txtemailid.text == reader["emailid"].tostring() && txtphonenumber.text == reader["phonenumber"].tostring())
+            //        {
+            //            lblmessage.text = "username,emailid,phonenumber must be unique";
+            //            txtusername.text = string.empty;
+            //            txtemailid.text = string.empty;
+            //            txtphonenumber.text = string.empty;
+            //        }
+            //        else
+            //        {
                         InsertValues(Name, UserName, Password, Confirmpassword, Emailid, PhoneNumber, Gender, DOB, Designation, Joining, ConnectionString);
 
-                    }
-                }
+                //    }
+                //}
 
-            }
+            //}
         }
 
         private void InsertValues(String Name, String UserName, String Password, String Confirmpassword, String Emailid, String PhoneNumber, String Gender, String DOB, string Designation, string Joining, string ConnectionString)

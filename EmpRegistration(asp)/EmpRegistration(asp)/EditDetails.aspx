@@ -7,7 +7,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <asp:Label ID="lblMessage" runat="server"></asp:Label>
+    
     <table align="center">
            <tr>
                 <td><asp:Label ID="lblName" runat="server" Text="Name"></asp:Label></td>
@@ -80,13 +80,13 @@
      </tr>
      <tr>
          <td></td>
-         <td><asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click1"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
-             <asp:Button ID="btnCancel" runat="server" Text="Cancel" />
+         <td><asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click"  />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;
+             <asp:Button ID="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" />
          </td>
      </tr>
 
-
     </table> 
+    <asp:Label ID="lblMessage" runat="server"></asp:Label>
         
         
 </asp:Content>
