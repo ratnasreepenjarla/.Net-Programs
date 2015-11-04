@@ -109,6 +109,7 @@ namespace EmpRegistration_asp_
                     cmd.ExecuteNonQuery();
                     lblMessage.Text = "values inserted successfully";
                     FormClear();
+                    Response.Redirect("Login.aspx");
                 }
 
                 catch (Exception ex)
@@ -139,9 +140,10 @@ namespace EmpRegistration_asp_
             DdlDesignation.ClearSelection();
         }
 
-        protected void Timer1_Tick(object sender, EventArgs e)
+    
+        protected void Timer1_Tick1(object sender, EventArgs e)
         {
-            Response.Redirect("Login.aspx");
+            
         }
       
     }

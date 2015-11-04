@@ -1,0 +1,45 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Home.master.cs" Inherits="EmpRegistration_asp_.Home" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link href="StyleSheet1.css" rel="stylesheet" />
+    </asp:ContentPlaceHolder>
+    
+<style type="text/css">
+
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+  
+       <asp:Label ID="lblUserName" runat="server"></asp:Label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:HyperLink ID="Logout" Visible="false" NavigateUrl="Logout.aspx"  runat="server">Logout</asp:HyperLink>
+      
+          <br />
+            <br />
+          <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server"  ShowStartingNode="false"/>
+           <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick">
+         <LevelMenuItemStyles>
+<asp:MenuItemStyle CssClass="parent_menu" />
+</LevelMenuItemStyles>
+
+
+<DynamicHoverStyle CssClass="hover_menu" />
+<StaticSelectedStyle CssClass="selected_menu" />
+<StaticHoverStyle CssClass="hover_menu" />
+                  </asp:Menu>
+        </div>
+         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+   
+     
+    
+    </form>
+</body>
+</html>

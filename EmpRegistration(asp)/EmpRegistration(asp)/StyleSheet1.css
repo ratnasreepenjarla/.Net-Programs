@@ -1,0 +1,55 @@
+﻿ .A
+        {
+            color:white;
+            font-family:'Lucida Sans';
+        }
+        body,table
+        {
+            background-color:#20B2AA;
+        }
+        .auto-style1 {
+            height: 23px;
+        }
+        #lblMessage,.Error
+        {
+            color:red
+        }
+        
+        .parent_menu
+{
+width: 110px;
+background-color: #8AE0F2;
+color: #000;
+text-align: center;
+height: 30px;
+margin-right: 5px;
+}
+.child_menu
+{
+width: 110px;
+background-color: #000;
+color: #fff;
+text-align: center;
+height: 30px;
+line-height: 30px;
+
+}
+.sub_menu
+{
+width: 110px;
+background-color: #000;
+color: #fff;
+text-align: center;
+height: 30px;
+line-height: 30px;
+margin-top: 5px;
+}
+.selected_menu
+{
+background-color: #FF6600;
+}
+.hover_menu
+{
+background-color: #990000;
+color:#fff;
+}

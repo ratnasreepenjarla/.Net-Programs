@@ -34,7 +34,7 @@ namespace EmpRegistration_asp_
                        }
                      else
                      {
-                         lblMessage.Text = "No records found";
+                         lblMessage.Text = "Invalid User Name and Password";
                      }
                    
                }
