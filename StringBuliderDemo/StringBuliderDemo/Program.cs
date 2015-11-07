@@ -14,7 +14,9 @@ namespace EnumDemo
             Console.WriteLine("enter book catageory");
             Console.WriteLine("0.mathmatics\n1.social\n2.english");
             int choice =int.Parse( Console.ReadLine());
+         
             Catageory cat = (Catageory)choice;
+    
             switch(cat)
             {
                 case  Catageory.mathmatics:
@@ -39,9 +41,16 @@ namespace EnumDemo
                         break;
 
                   
+                    
             }
-       
 
+            enumexample(Catageory.mathmatics);   
     }
+        public static void enumexample(Catageory c2)
+        {
+            Console.WriteLine(c2);
+          
+        }
     }
 }
+
