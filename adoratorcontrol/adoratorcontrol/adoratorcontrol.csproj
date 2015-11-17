@@ -66,6 +66,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="adorator.aspx" />
+    <Content Include="images %281%29.jpg" />
+    <Content Include="images.jpg" />
     <Content Include="myadd.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
