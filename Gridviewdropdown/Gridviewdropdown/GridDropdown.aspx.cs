@@ -29,11 +29,10 @@ namespace Gridviewdropdown
             DataSet ds = new DataSet();
             da.Fill(ds, "employees");
             DropDownList1.DataSource = ds;
-            DropDownList1.DataTextField = "name";
+            DropDownList1.DataTextField ="name";
             DropDownList1.DataBind();
 
-
-        }
+       }
 
         protected void btnDelete_Click(object sender, EventArgs e)
         {
