@@ -6,6 +6,7 @@
 <div>
 
     <table align="center">
+        <caption>Registration Form</caption>
         <tr><td><asp:Label ID="LoginId" runat="server" Text="LoginId"></asp:Label></td></tr>
          <tr>
             <td><asp:Label ID="lblName" runat="server" Text="Nmae"></asp:Label></td>

@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project {
+namespace GridView_with_checkbox {
     
     
-    public partial class Home {
-        
-        /// <summary>
-        /// head control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder head;
+    public partial class GridViewWithCheckBox {
         
         /// <summary>
         /// form1 control.
@@ -31,39 +22,39 @@ namespace Project {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// SiteDataSource control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapDataSource SiteDataSource;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// HomeMenu control.
+        /// btndelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Menu HomeMenu;
+        protected global::System.Web.UI.WebControls.Button btndelete;
         
         /// <summary>
-        /// ContentPlaceHolder1 control.
+        /// checkall control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder ContentPlaceHolder1;
+        protected global::System.Web.UI.WebControls.CheckBox checkall;
         
         /// <summary>
-        /// lblYear control.
+        /// lblmsg control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblYear;
+        protected global::System.Web.UI.WebControls.Label lblmsg;
     }
 }

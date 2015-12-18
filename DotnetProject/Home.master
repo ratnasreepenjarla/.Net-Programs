@@ -1,16 +1,16 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Homepage.Master.cs" Inherits="Project.Home" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Home.master.cs" Inherits="Home" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
+    <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+     <div>
       
         <asp:SiteMapDataSource ID="SiteDataSource" runat="server" ShowStartingNode="false" />
         <asp:Menu ID="HomeMenu" runat="server" DataSourceID="SiteDataSource" Orientation="Horizontal"></asp:Menu>
@@ -23,7 +23,6 @@
         <div align="center">
              &copy;Copyright <asp:Label ID="lblYear" runat="server" Text=""></asp:Label>-Quality Thought
         </div>
-
     </form>
 </body>
 </html>
