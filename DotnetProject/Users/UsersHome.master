@@ -1,0 +1,40 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="UsersHome.master.cs" Inherits="Users_UsersHome" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:Menu ID="usersMasterPage" runat="server" Orientation="Horizontal">
+         <Items>
+             <asp:MenuItem Text="Home"></asp:MenuItem>
+             <asp:MenuItem Text="Forums">
+               <asp:MenuItem Text="Post A Query" NavigateUrl="~/Users/PostAQuery.aspx" ></asp:MenuItem>
+               <asp:MenuItem Text="View All Questions" NavigateUrl="~/Users/ViewAllQuestions.aspx"></asp:MenuItem>
+               <asp:MenuItem Text="View Answered Questions" NavigateUrl="~/Users/ViewAnsweredQuestions.aspx"></asp:MenuItem>
+             </asp:MenuItem>
+             <asp:MenuItem Text="Articles">
+                 <asp:MenuItem Text="Post Article" NavigateUrl="~/Users/PostArticle.aspx"></asp:MenuItem>
+                 <asp:MenuItem Text="Search Article" NavigateUrl="~/Users/SearchArticle.aspx"></asp:MenuItem>
+                 <asp:MenuItem Text="View All Articles" NavigateUrl="~/Users/ViewAllArticles.aspx"></asp:MenuItem>
+             </asp:MenuItem>
+             <asp:MenuItem Text="Projects">
+                 <asp:MenuItem Text="Upload Project" NavigateUrl="~/Users/UploadProject.aspx"></asp:MenuItem>
+                 <asp:MenuItem Text="View/Search Project" NavigateUrl="~/Users/ViewrSearchProject.aspx"></asp:MenuItem>
+            </asp:MenuItem>
+             <asp:MenuItem Text="Signout" NavigateUrl="~/Users/Signout.aspx"></asp:MenuItem>
+         </Items>  
+        </asp:Menu>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

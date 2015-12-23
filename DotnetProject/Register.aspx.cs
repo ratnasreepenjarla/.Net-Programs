@@ -13,8 +13,14 @@ public partial class Register : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        txtLoginid.Text = dbusers.GenerateLoginid().ToString();
-        txtName.ForeColor = Color.Green;
+
+        autoGenerateLoginId();
+    }
+
+    private void autoGenerateLoginId()
+    {
+        dbusers.Loginid = dbusers.GenerateLoginid();
+        txtLoginid.Text = dbusers.Loginid.ToString();
     }
     
     protected void btnRegister_Click(object sender, EventArgs e)

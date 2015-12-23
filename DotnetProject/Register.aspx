@@ -50,7 +50,7 @@
                <asp:ListItem>What is Your Home Town</asp:ListItem>
                <asp:ListItem>What is Your Favourite Colour</asp:ListItem>
                </asp:DropDownList>
-               <asp:CustomValidator ID="CustomValidator1" runat="server" ControlToValidate="ddlSelectQuestion" ErrorMessage="select anyone from the list" OnServerValidate="CustomValidator1_ServerValidate"></asp:CustomValidator>
+               <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"></asp:CustomValidator>
             </td>
         </tr>
          <tr>
