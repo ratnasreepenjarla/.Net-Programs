@@ -7,7 +7,7 @@
         <Columns>
             <asp:TemplateField>
                 <ItemTemplate>
-                    <asp:HyperLink ID="replylink" runat="server" NavigateUrl='<%Eval("QuestionId","~/users/ForumsReply.aspx?QuestionId={0}") %>' Text="select"></asp:HyperLink>
+                    <asp:HyperLink ID="replylink" runat="server" NavigateUrl='<%#Eval("QuestionId","~/users/ForumsReply.aspx?QuestionId={0}") %>' Text="select"></asp:HyperLink>
                 </ItemTemplate>
             </asp:TemplateField>
             <asp:BoundField DataField="Question" HeaderText="Question" SortExpression="Question" />

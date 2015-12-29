@@ -19,8 +19,8 @@ public partial class Register : System.Web.UI.Page
 
     private void autoGenerateLoginId()
     {
-        dbusers.Loginid = dbusers.GenerateLoginid();
-        txtLoginid.Text = dbusers.Loginid.ToString();
+        dbusers.LoginId = dbusers.GenerateLoginid();
+        txtLoginid.Text = dbusers.LoginId.ToString();
     }
     
     protected void btnRegister_Click(object sender, EventArgs e)

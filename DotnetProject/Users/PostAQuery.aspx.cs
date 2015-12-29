@@ -23,7 +23,8 @@ public partial class Users_PostAQuery : System.Web.UI.Page
         int i=0;
         dbusers.UserName = Session["UserName"].ToString();
         fr.Question = txtQuestion.Text;
-        fr.LoginId = fr.GetLoginId(dbusers);
+        fr.LoginId = dbusers.GetLoginId(dbusers);
+            
         fr.QuestionId =Convert.ToInt32(txtQuestionId.Text);
         i = fr.PostQuery(fr);
         if(i>0)

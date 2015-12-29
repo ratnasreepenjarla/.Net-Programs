@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
    <table>
        <caption>Forget Password</caption>
+       <br /><br />
         <tr>
             <td><asp:Label ID="lblUserName" runat ="server" Text="UserName"></asp:Label></td>
             <td><asp:TextBox ID="txtUserName" runat="server"></asp:TextBox></td></tr>
@@ -30,8 +31,10 @@
             <td></td>
             <td><asp:Button ID="btnGetPassword" runat="server" Text="GetPassword" OnClick="btnGetPassword_Click"/></td>
         </tr>
-     
-  </table>
+    </table>
+    <div align="center">
+        <asp:Label ID="lblforgetpswd" runat="server"></asp:Label>
+    </div>
 
 </asp:Content>
 

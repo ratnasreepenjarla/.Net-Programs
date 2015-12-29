@@ -11,7 +11,7 @@
             </tr>
             <tr>
                 <td><asp:Label ID="lblanswer" runat="server" Text="Answer"></asp:Label></td>
-                <td><asp:TextBox ID="txtAnswer" runat="server"></asp:TextBox></td>
+                <td><asp:TextBox ID="txtReply" runat="server"></asp:TextBox></td>
             </tr>
             <tr>
                  <td></td>

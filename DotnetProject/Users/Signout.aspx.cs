@@ -9,6 +9,7 @@ public partial class Users_Signout : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        Response.Redirect("Login.aspx");
+        Session.Abandon();
+        Response.Redirect("~/Login.aspx");
     }
 }

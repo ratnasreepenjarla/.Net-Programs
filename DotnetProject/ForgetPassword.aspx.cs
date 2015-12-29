@@ -19,8 +19,7 @@ public partial class ForgetPassword : System.Web.UI.Page
         dbusers.UserName = txtUserName.Text;
         dbusers.SecurityQuestion = ddlSelectQuestion.SelectedItem.ToString();
         dbusers.Answer = txtAnswer.Text;
-        string Password = dbusers.GetPassword(dbusers);
-        Response.Write("Password is" + Password);
+        lblforgetpswd.Text = "Password is " + dbusers.GetPassword(dbusers); 
              
     }
 }

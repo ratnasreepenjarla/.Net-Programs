@@ -13,19 +13,20 @@ public partial class Users_ForumsReply : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         lblreply.Visible = false;
-        String Qid=Request.QueryString["QuestionId"].ToString();
+        String Qid=Request.QueryString["QuestionId"];
         fr.QuestionId= Convert.ToInt32(Qid);
         lblgetquestion.Text = fr.GetQuestion(fr);
     }
     protected void btnPostReply_Click(object sender, EventArgs e)
     {
-        dbusers.UserName = Session["UserName"].ToString();    
+        dbusers.UserName = Session["UserName"].ToString();
+
+        fr.LoginId= dbusers.GetLoginId(dbusers);
         fr.Question = lblgetquestion.Text;
-        fr.Answer = txtAnswer.Text;
-        dbusers.Loginid = dbusers.GetLoginId(dbusers);
+        fr.Reply = txtReply.Text;
         fr.ReplyId = fr.GetReplyId();
-        int i = fr.ReplyQuery();
-        if(i>o)
+        int i = fr.ReplyQuery(fr);
+        if(i>0)
         {
             lblreply.Text = "Reply saved successfully";
         }
