@@ -12,7 +12,7 @@
     
         <%--<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=SYS-PC;Initial Catalog=Employee;Integrated Security=True"
          SelectCommand="select * from Emp" DeleteCommand="delete Emp where empno=@eno">--%>
-        <asp:GridView ID="gv" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None">
+        <asp:GridView ID="gv" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" DataKeyNames="ID">
             <AlternatingRowStyle BackColor="White" />
             <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
             <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
@@ -23,6 +23,16 @@
             <SortedAscendingHeaderStyle BackColor="#4D0000" />
             <SortedDescendingCellStyle BackColor="#FCF6C0" />
             <SortedDescendingHeaderStyle BackColor="#820000" />
+            <Columns>
+        <asp:BoundField DataField="CustomerID" HeaderText="Product ID" 
+            InsertVisible="False" ReadOnly="True" SortExpression="CustomerID" />
+        <asp:BoundField DataField="CompanyName" HeaderText="Product Name" 
+            SortExpression="CompanyName" />
+        <asp:BoundField DataField="FirstName" HeaderText="Quantity" 
+            SortExpression="FirstName" />
+        <asp:BoundField DataField="LastName" HeaderText="Category" 
+            SortExpression="LastName" />
+    </Columns>
         </asp:GridView>
         <asp:Button ID="btndelete" runat="server" Text="Delete" />
         <asp:CheckBox ID="checkall" runat="server" Text="Select All" AutoPostBack="true" />
