@@ -40,11 +40,16 @@ namespace FileConceptasp
 
         protected void btnUpload_Click(object sender, EventArgs e)
         {
+          
             string filename = Path.GetFileName(FileUpload1.PostedFile.FileName);
             Stream str = FileUpload1.PostedFile.InputStream;
             BinaryReader br = new BinaryReader(str);
             byte[] size = br.ReadBytes((int)str.Length);
+            SqlConnection con = new SqlConnection("Data Source=SYS-PC;Initial Catalog=ratna;Integrated Security=True");
+            con.Open();
             SqlCommand cmd = new SqlCommand("insert into FileInformation(Filename,Filetype,FileData)values(@name,@type,@data)", con);
+            cmd.ExecuteNonQuery();
+            con.Close();
 
 
         }
